@@ -15,18 +15,31 @@
 }
 
 import React from "react";
-import ReactDOM  from "react-dom";
+import ReactDOM from "react-dom";
 
-let ele = React.createElement(
-  "div",
-  { id: "parent" },
-  React.createElement(
-    "div",
-    { id: "child" },
-    [React.createElement("h1", { id: "parent" }, "inside h1 tag"),
-    React.createElement("h2", { id: "parent" }, "inside h2 tag")]
-  )
+// let ele = React.createElement(
+//   "div",
+//   { id: "parent" },
+//   React.createElement(
+//     "div",
+//     { id: "child" },
+//     [React.createElement("h1", { id: "parent" }, "inside h1 tag"),
+//     React.createElement("h2", { id: "parent" }, "inside h2 tag")]
+//   )
+// );
+
+const Heading = () => {
+  return <h1>this is heading element</h1>;
+};
+
+const ReactComponent = () => (
+  <div className="parent">
+    {Heading()}
+    <Heading/>
+    <Heading></Heading>
+    <h1>this is heading inside parent</h1>
+  </div>
 );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(ele);
+root.render(<ReactComponent />);
