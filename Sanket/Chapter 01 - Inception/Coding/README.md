@@ -6,3 +6,8 @@
 5. npm i react-dom 
 6. npm parcel index.html (for local/dev build)
 7. npm parcel build index.html (for prod build)
+
+#now after adding commands in scripts section of package.json
+
+1. npm run start
+2. npm run build

@@ -1,0 +1,14 @@
+div{
+    text-align: center;
+}
+
+.nav-item{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: end;
+
+    span{
+        padding: 25px;
+    }
+}
