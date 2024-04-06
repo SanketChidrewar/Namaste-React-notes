@@ -1,14 +1,125 @@
-div{
-    text-align: center;
-}
+#root {
+  // background-color: rgb(233, 196, 148);
 
-.nav-item{
+  padding: 20px;
+  .header {
     display: flex;
     flex-direction: row;
-    align-items: end;
-    justify-content: end;
+    justify-content: space-between;
+    border: 1px solid black;
 
-    span{
-        padding: 25px;
+    .logo {
+      display: block;
+      width: 100px;
     }
+
+    .nav-item {
+      display: flex;
+      justify-content: end;
+      ul {
+        display: flex;
+        list-style-type: none;
+        li {
+          font-size: medium;
+          font-weight: 600;
+          padding-left: 25px;
+          padding-right: 15px;
+          align-content: center;
+        }
+      }
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      margin: 10px;
+      input {
+        padding: 20px;
+        width: 30vw;
+        margin-right: 15px;
+        border-radius: 10;
+        font-size: medium;
+      }
+      button {
+        background-color: blue;
+        text-align: center;
+        color: white;
+        font-size: medium;
+        font-weight: 400;
+        width: 10vw;
+        border-radius: 10;
+      }
+    }
+
+    .rest-container {
+      display: flex;
+      flex-direction: row;
+
+      .rest-card:hover{
+        transform: scale(1.1);
+        box-shadow: 5px 5px lightgray
+      }
+
+      .rest-cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .rest-card {
+          margin: 15px;
+          border: 1px solid black;
+          border-radius: 10px;
+          background-color: aliceblue;
+
+          
+
+          .rest-card-img {
+            img {
+              width: 250px;
+              // border: 1px solid black;
+              border-radius: 10px;
+            }
+          }
+          .rest-card-details {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 10px;
+
+            .rest-card-name {
+              font-size: larger;
+              font-family: "Times New Roman", Times, serif;
+              font-weight: 800;
+              margin: 5px 0px;
+            }
+            .rest-card-ratings {
+              font-size: medium;
+              font-family: Arial, Helvetica, sans-serif;
+              font-weight: 200;
+              margin: 5px 0px;
+              .rest-card-star-rating {
+                width: 15px;
+              }
+            }
+            .rest-card-cousin {
+              font-size: small;
+              font-family: Arial, Helvetica, sans-serif;
+              font-weight: 100;
+              margin: 5px 0px;
+            }
+            .rest-card-address {
+              font-size: smaller;
+              font-family: Arial, Helvetica, sans-serif;
+              margin: 5px 0px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
